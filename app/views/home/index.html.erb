@@ -1,2 +1,70 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<div><%= session %></div>
+<div>
+	
+</div>
+
+<!-- Region select -->
+<select name="region" id="region" class="updater" size="1">
+<% if !@regions.blank? %>
+  <% for reg in @regions %>
+	<option value="<%= reg.id %>"><%= reg.name %></option>    
+  <% end %> 
+<% else %>
+  <option value="-1">--------</option>
+<% end %>
+</select>
+
+<!-- Equipment select -->
+<select name="equipment" id="equipment" class="updater" size="1">
+<% if !@equipments.blank? %>
+  <% for eq in @equipments %>
+	<option value="<%= eq.id %>"><%= eq.name %></option>    
+  <% end %> 
+<% else %>
+  <option value="-1">--------</option>
+<% end %>
+</select>
+
+<!-- Tariffs -->
+<select name="tariff" id="tariff" class="updater" size="1">
+	<% if !@tariffs.blank? %>
+	  <% for item in @tariffs %>
+	    <option value="<%= item %>"><%= item %></option>    
+	  <% end %>
+	<% else %>
+	  <option value="-1">--------</option>
+	<% end %>
+</select>
+<br/><br/>
+<a href="javascript:User.storeData();">Store</a>
+
+<div id="error">
+	HERE
+</div>
+
+<div id="calculator">
+	<div class="calcline tariff1 tariff2 tariff3">
+		<input type="text" name="pvalt1" class="changeable" value="0" id="pvalt1">
+		<input type="text" name="valt1" class="changeable" value="0" id="valt1">
+		<span id="pricet1">0</span>
+		<span id="res1">0</span>
+	</div>	
+
+	<div class="calcline tariff2 tariff3">
+		<input type="text" name="pvalt2" class="changeable" value="0" id="pvalt2">
+		<input type="text" name="valt2" class="changeable" value="0" id="valt2">
+		<span id="pricet2">0</span>
+		<span id="res2">0</span>
+	</div>	
+
+	<div class="calcline tariff3">
+		<input type="text" name="pvalt3" class="changeable" value="0" id="pvalt3">
+		<input type="text" name="valt3" class="changeable" value="0" id="valt3">
+		<span id="pricet3">0</span>
+		<span id="res3">0</span>
+	</div>	
+
+</div>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: MyString
+  type: MyString
+  t1: 1.5
+  t2: 1.5
+  t3: 1.5
+  region_id: 1
+  equipment_id: 1
+
+two:
+  id: 1
+  name: MyString
+  type: MyString
+  t1: 1.5
+  t2: 1.5
+  t3: 1.5
+  region_id: 1
+  equipment_id: 1

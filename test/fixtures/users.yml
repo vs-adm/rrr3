@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  session: MyString
+  t1: 1.5
+  t2: 1.5
+  t3: 1.5
+
+two:
+  session: MyString
+  t1: 1.5
+  t2: 1.5
+  t3: 1.5
