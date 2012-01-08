@@ -13,15 +13,19 @@ class HomeController < ApplicationController
   end
   
   def request_tariff
-    tariff = Tariff.find(:first, :conditions => {
-      :region_id => params[:region],
-      :equipment_id => params[:equipment],
-      :type => "Tariff"+params[:tariff]})
-    render :json => {
-      :tariff => params[:tariff],
-      :t1 => tariff.t1,
-      :t2 => tariff.t2,
-      :t3 => tariff.t3 }
+    begin
+      tariff = Tariff.find(:first, :conditions => {
+        :region_id => params[:region],
+        :equipment_id => params[:equipment],
+        :type => "Tariff"+params[:tariff]})
+      render :json => {
+        :tariff => params[:tariff],
+        :t1 => tariff.t1,
+        :t2 => tariff.t2,
+        :t3 => tariff.t3 }
+      rescue
+        render :json => { :error => "error" }
+    end
   end
 
 end

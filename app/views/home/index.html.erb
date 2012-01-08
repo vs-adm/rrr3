@@ -1,11 +1,13 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-<div><%= session %></div>
-<div>
-	
+<div id="main">
+<div id="stripes"></div>
+<div id="header">
+    <div id="title">
+        Энергокалькулятор
+    </div>
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+    <div class="yashare-auto-init left small" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="facebook,twitter,vkontakte,odnoklassniki,yaru"></div> 
 </div>
-
+<div id="selector">
 <!-- Region select -->
 <select name="region" id="region" class="updater" size="1">
 <% if !@regions.blank? %>
@@ -32,39 +34,57 @@
 <select name="tariff" id="tariff" class="updater" size="1">
 	<% if !@tariffs.blank? %>
 	  <% for item in @tariffs %>
-	    <option value="<%= item %>"><%= item %></option>    
+	    <option value="<%= item %>"><%= I18n.t 'tariff.count.n'+item.to_s %></option>    
 	  <% end %>
 	<% else %>
 	  <option value="-1">--------</option>
 	<% end %>
 </select>
 <br/><br/>
-<a href="javascript:User.storeData();">Store</a>
+</div>
 
 <div id="error">
-	HERE
+ERROR
 </div>
 
 <div id="calculator">
-	<div class="calcline tariff1 tariff2 tariff3">
-		<input type="text" name="pvalt1" class="changeable" value="0" id="pvalt1">
-		<input type="text" name="valt1" class="changeable" value="0" id="valt1">
-		<span id="pricet1">0</span>
-		<span id="res1">0</span>
-	</div>	
+<!--
+    <div id="head">
+        <span class="field">За прошлый месяц</span>
+        <span class="field">За этот месяц</span>
+        <span class="field">Тариф</span>
+        <span class="field">К оплате</span>
+        
+    </div>
+-->
+<% # TODO: Dirty hack, need refactor tariff count -%>
+<% (1..3).each do |n|  %>
+<% tariff_str = ''; (1..(4-n)).each{|k| tariff_str += "tariff"+(4-k).to_s+" "; } %>
+<div class="calcline <%= tariff_str %>">
+    <div class="left labels">
+        <span class="desc"><%= I18n.t 'tariff.name.n'+n.to_s %></span><br/>
+        <span class="label"><%= I18n.t 'tariff.desc.n'+n.to_s %></span>
+    </div>
+    <div class="left prev">
+        <input type="text" name="pvalt<%= n %>" class="changeable" value="0" id="pvalt<%= n %>">    
+    </div>  
+    <div class="left current">
+        <input type="text" name="valt<%= n %>" class="changeable" value="0" id="valt<%= n %>">    
+    </div>
+    <div class="left price">
+        <span id="pricet<%= n %>">0</span>    
+    </div>
+    <div class="left res">
+        <span id="res<%= n %>">0</span>    
+    </div>
+    <div class="clear"></div>
+</div>
+<% end %>
 
-	<div class="calcline tariff2 tariff3">
-		<input type="text" name="pvalt2" class="changeable" value="0" id="pvalt2">
-		<input type="text" name="valt2" class="changeable" value="0" id="valt2">
-		<span id="pricet2">0</span>
-		<span id="res2">0</span>
-	</div>	
+</div>
 
-	<div class="calcline tariff3">
-		<input type="text" name="pvalt3" class="changeable" value="0" id="pvalt3">
-		<input type="text" name="valt3" class="changeable" value="0" id="valt3">
-		<span id="pricet3">0</span>
-		<span id="res3">0</span>
-	</div>	
-
+<div id="footer">
+    Developed by <a href="mailto:sleephunter@gmail.com">Vasily Shmelev</a></br>
+    Hosting and tech support by <a target="_blank" href="http://locum.ru">locum.ru</a></br>    
+</div>
 </div>

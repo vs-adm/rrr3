@@ -29,6 +29,10 @@ $(document).ready(function () {
 		$("#valt3").val(tr.t3);
 	}
 	
+	function CallError(code) {
+	    $("#error").html("Произошла ошибка при обработке запроса. Повторите попытку").fadeIn("slow").delay(1000).fadeOut("slow");
+	}
+	
 	// TODO: handle errors
 	function request_tariff () {
 		data = {
@@ -37,6 +41,10 @@ $(document).ready(function () {
 			tariff : $("#tariff").val()
 		};												
 		$.getJSON("/home/request_tariff", data, function(data){
+			if (data.error) {
+			    CallError(data.error);
+			}
+			
 			$(".calcline").hide();
 			
 			$("#pricet1").html(data.t1);
@@ -47,7 +55,7 @@ $(document).ready(function () {
 			
 			recalculate();
 		}).error(function(){
-			$("#error").html("Произошла ошибка при обработке запроса. Повторите попытку").fadeIn("slow").delay(1000).fadeOut("slow");
+			CallError("NetworkError");
 		});
 	}
 	
