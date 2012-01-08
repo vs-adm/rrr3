@@ -70,7 +70,7 @@ $(document).ready(function () {
 	User.restoreData();
 	
 	request_tariff();
-	
+		
 	// Save data on leave
 	$(window).unload(function() {
 	  User.storeData();

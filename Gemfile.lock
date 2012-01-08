@@ -120,6 +120,7 @@ DEPENDENCIES
   jquery-rails
   oauth
   rails (= 3.1.1)
+  rake
   sqlite3
   unicorn
   wirble

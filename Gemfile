@@ -15,6 +15,7 @@ end
 gem 'sqlite3'
 gem 'oauth'
 gem 'jquery-rails'
+gem 'rake'
 
 # Use unicorn as the web server
 gem 'unicorn'
