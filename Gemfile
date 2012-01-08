@@ -1,6 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
+gem 'rails', '3.1.1'
+
+group :development do
+  gem "wirble"
+  gem "hirb"
+  gem "awesome_print"
+  gem "bond"
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Electro::Application.config.secret_token = '7c65a6a7c5be12cd967fe3f1757c18ef99f3042a9c8bd38f947124bab26d448d6736da36c511c8298e6689601d9e6c0a01972072f4f04c71146a777d0a03e959'
+Electro::Application.config.secret_token = '8c21fc451e931847b68298ef950766719a8761863301e14a9653a50d8e4ffe68d433f785432e91b2c5e69600180a9585826eeede4ce9b42fb6b93c66d83d9b0b'

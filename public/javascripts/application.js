@@ -11,9 +11,9 @@ $(document).ready(function () {
 		tr.t2 = $("#valt2").val();
 		tr.t3 = $("#valt3").val();
 		
-		$("#res1").html((tr.t1-$("#pvalt1").val())*$("#pricet1").html());
-		$("#res2").html((tr.t2-$("#pvalt2").val())*$("#pricet2").html());
-		$("#res3").html((tr.t3-$("#pvalt3").val())*$("#pricet3").html());
+		$("#res1").html(((tr.t1-$("#pvalt1").val())*$("#pricet1").html()).toFixed(2));
+		$("#res2").html(((tr.t2-$("#pvalt2").val())*$("#pricet2").html()).toFixed(2));
+		$("#res3").html(((tr.t3-$("#pvalt3").val())*$("#pricet3").html()).toFixed(2));
 	}
 	
 	function fillFields() {

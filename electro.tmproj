@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>public/javascripts/application.js</string>
+	<string>app/views/home/index.html.erb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -35,14 +35,14 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/models/equipment.rb</key>
+		<key>app/controllers/user_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>7</integer>
 				<key>line</key>
-				<integer>1</integer>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -82,9 +82,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>10</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>40</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>17</integer>
+		</dict>
+		<key>app/views/layouts/application.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>45</integer>
+				<key>line</key>
+				<integer>5</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -96,9 +110,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -110,23 +124,37 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>7</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>38</integer>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>10</integer>
+			<integer>0</integer>
+		</dict>
+		<key>public/javascripts/user.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>public/stylesheets/all.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
-				<key>line</key>
 				<integer>0</integer>
+				<key>line</key>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -138,12 +166,14 @@
 	<array>
 		<string>app/views/home/index.html.erb</string>
 		<string>public/javascripts/application.js</string>
+		<string>public/javascripts/user.js</string>
+		<string>app/views/layouts/application.html.erb</string>
 		<string>public/stylesheets/all.css</string>
 		<string>config/routes.rb</string>
 		<string>app/models/tariff.rb</string>
 		<string>app/models/region.rb</string>
-		<string>app/models/equipment.rb</string>
 		<string>app/controllers/home_controller.rb</string>
+		<string>app/controllers/user_controller.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
