@@ -159,4 +159,15 @@ select {
 .small { font-size: 12px; }
 .clear { clear: both; }
 .calcline { display: none; }
-#error { display: none; }
+#error { 
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    width: 220px;
+    height: 150px;
+    padding: 20px;
+    margin-top: -150px;
+    color: white;
+    background: #D82D1E;
+}
