@@ -71,14 +71,14 @@ select {
     position: absolute;
     width: 600px;
     height: 40px;
-    padding: 1em 2em 1em 2em;
+    padding: 20px 30px 20px 30px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     top: 50%;
     left: 50%;
     margin-top: -160px;
-    margin-left: -300px;
+    margin-left: -330px;
     box-shadow: 5px 5px 3px rgb(0,0,0);
     box-shadow: 5px 5px 3px rgba(0,0,0,0.2);    
 }
@@ -89,14 +89,14 @@ select {
     position: absolute;
     width: 600px;
     height: 180px;
-    padding: 2em;
+    padding: 30px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     top: 50%;
     left: 50%;
     margin-top: -70px;
-    margin-left: -300px;
+    margin-left: -330px;
     box-shadow: 5px 5px 3px rgb(0,0,0);
     box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
 }
